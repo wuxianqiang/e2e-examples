@@ -1,0 +1,71 @@
+<template>
+  <view class="list">
+    <view wx:for="{{listData}}" wx:key="index">{{item}}</view>
+    <view class="dialog" bindtap="handleClick" id="tapTest" data-hi="Weixin" data="ss">点击</view>
+    <view class="box" wx:if="{{dialogVisable}}">
+      <view class="box-inner">{{count}}</view>
+      <view class="box-close" bindtap="handleClose">x</view>
+    </view>
+    <view wx:style="color: #000;">style</view>
+    <image src="./logo.jpeg"></image>
+  </view>
+</template>
+
+<script>
+  import { createComponent } from '@mpxjs/core'
+
+  createComponent({
+    data: {
+      listData: ['手机', '电视', '电脑'],
+      dialogVisable: false,
+      count: 0
+    },
+    methods: {
+      handleClick (e) {
+        this.count = this.count + 1
+        this.dialogVisable = true
+        console.log("点击", e)
+      },
+      handleClose () {
+        this.dialogVisable = false
+      }
+    }
+  })
+</script>
+
+<style lang="stylus">
+  .list
+    background-color red
+  .box
+    position fixed
+    width 100vw
+    height 100vh
+    background rgba(39,40,44,0.4)
+    left 0
+    top 0
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+  .box-inner
+    width 260px
+    height 300px
+    background red
+    display flex
+    align-items center
+    justify-content center
+    font-size 48px
+  .box-close
+    color #fff
+    margin-top 12px
+    border 1px solid #fff
+    font-size 10px
+    border-radius 50%
+    padding 1px 6px
+</style>
+
+<script type="application/json">
+  {
+    "component": true
+  }
+</script>

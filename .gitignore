@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+npm-debug.log
+.idea/
+deploy/
+output/
+dist/
+.vscode/
+.cache
+test/e2e/screenshot/
