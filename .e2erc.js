@@ -5,10 +5,11 @@ module.exports = {
   sequence: [ // spec 文件顺序
     // 'preTest',
     'list',
-    // 'home'
+    'home'
   ],
   devServer: {
     open: true
   },
+  recordsDir: 'dist/wx/minitest',
   testSuitsDir: 'test/e2e/components' // spec 文件存放目录
 }

@@ -33,6 +33,8 @@
      await miniProgram.screenshot({
        path: 'test/e2e/screenshot/homePage2.png'
      })
+     const desc = await page.$('list', 'components/list2271575d/index')
+     expect(desc.tagName).toBe('view')
      await close.tap()
      await page.waitFor(300)
 
