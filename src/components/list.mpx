@@ -1,6 +1,6 @@
 <template>
   <view class="list">
-    <view wx:for="{{listData}}" wx:key="index">{{item}}</view>
+    <view class="item" wx:for="{{listData}}" wx:key="index">{{item}}</view>
     <view class="dialog" bindtap="handleClick" id="tapTest" data-hi="Weixin" data="ss">点击</view>
     <view class="box" wx:if="{{dialogVisable}}">
       <view class="box-inner">{{count}}</view>

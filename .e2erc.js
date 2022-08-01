@@ -4,7 +4,7 @@ module.exports = {
   plugins: [new PluginReport()],
   sequence: [ // spec 文件顺序
     // 'preTest',
-    'list',
+    // 'list',
     'home'
   ],
   devServer: {

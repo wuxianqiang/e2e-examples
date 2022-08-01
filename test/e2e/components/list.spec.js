@@ -27,11 +27,12 @@ describe('index', () => {
   }, 30000)
 
   it('desc', async () => {
+    await page.waitFor(1000)
     const desc = await page.$('list', 'components/list2271575d/index')
     // 保存页面快照
-    await miniProgram.screenshot({
-      path: 'test/e2e/screenshot/list1.png'
-    })
+    // await miniProgram.screenshot({
+    //   path: 'test/e2e/screenshot/list1.png'
+    // })
     // 断言页面标签
     expect(desc.tagName).toBe('view')
     // 断言文字内容
