@@ -46,9 +46,9 @@
      await dialog.tap()
      await page.waitFor(300)
      const close2 = await page.$('box-close', 'components/list2271575d/index')
-    //  await miniProgram.screenshot({
-    //   path: 'test/e2e/screenshot/homePage3.png'
-    // })
+     await miniProgram.screenshot({
+      path: 'test/e2e/screenshot/homePage3.png'
+    })
     await close2.tap()
     await page.waitFor(300)
    })

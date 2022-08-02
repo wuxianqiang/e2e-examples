@@ -9,7 +9,7 @@ import automator from '@mpxjs/e2e/src/index'
 //   console.log(' OK')
 //   return oldexpect(...args)
 // }
-
+automator.screenshotHandler({ tapSave: true })
 describe('index', () => {
   let miniProgram
   let page
@@ -31,7 +31,7 @@ describe('index', () => {
     const desc = await page.$('list', 'components/list2271575d/index')
     // 保存页面快照
     // await miniProgram.screenshot({
-    //   path: 'test/e2e/screenshot/list1.png'
+    //   path: 'test/e2e/pic/list1.png'
     // })
     // 断言页面标签
     expect(desc.tagName).toBe('view')
